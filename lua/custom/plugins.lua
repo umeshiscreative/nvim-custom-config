@@ -1,5 +1,7 @@
 local plugins = {
-
+  {
+    "tpope/vim-fugitive"
+  },
   {
     "christoomey/vim-tmux-navigator",
     lazy = false,
