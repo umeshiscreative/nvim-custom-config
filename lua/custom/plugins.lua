@@ -60,10 +60,10 @@ local plugins = {
     opts = {
       ensure_installed = {
         "eslint-lsp",
-        "eslint_d",
+ --       "eslint_d",
         "js-debug-adapter",
         "prettier",
-        "prettierd",
+--        "prettierd",
         "typescript-language-server",
         "pyright",--For Python,
         "gopls", --For Golang
@@ -154,6 +154,7 @@ local plugins = {
       require("pretty-fold").setup()
     end
   },
+  --[[
   {
     "lewis6991/gitsigns.nvim",
     config = function()
@@ -217,5 +218,18 @@ local plugins = {
       })
     end,
   },
+  --]]
+  {
+   'stevearc/aerial.nvim',
+    opts = {},
+    -- Optional dependencies
+    dependencies = {
+       "nvim-treesitter/nvim-treesitter",
+       "nvim-tree/nvim-web-devicons"
+    },
+    config = function ()
+      require "custom.configs.aerial"
+    end
+  }
 }
 return plugins
